@@ -28,55 +28,64 @@ public class Main {
         // It should be sent one argument only , the player score.
         // It should return an int.
         // The return data should be one of the following
-            // 1 if the score is >1000
-            // 2 if the score is >500 and <1000
-            // 3 if the score is >100 and <500
-            // 4 in all other cases
+        // 1 if the score is >1000
+        // 2 if the score is >500 and <1000
+        // 3 if the score is >100 and <500
+        // 4 in all other cases
         //
         //Call both methods and display the results of the following scores:
-            //1500
-            // 900
-            // 400
-            // 50
+        //1500
+        // 900
+        // 400
+        // 50
 
-        int highScorePosition=calculateHighscorePosition(1500);
-        displayHighScorePosition("Tim",highScorePosition);
+        int highScorePosition = calculateHighscorePosition(1500);
+        displayHighScorePosition("Tim", highScorePosition);
 
-        highScorePosition=calculateHighscorePosition(900);
-        displayHighScorePosition("Bob",highScorePosition);
+        highScorePosition = calculateHighscorePosition(900);
+        displayHighScorePosition("Bob", highScorePosition);
 
-        highScorePosition=calculateHighscorePosition(400);
-        displayHighScorePosition("Percy",highScorePosition);
+        highScorePosition = calculateHighscorePosition(400);
+        displayHighScorePosition("Percy", highScorePosition);
 
-        highScorePosition=calculateHighscorePosition(50);
-        displayHighScorePosition("Gilbert",highScorePosition);
+        highScorePosition = calculateHighscorePosition(50);
+        displayHighScorePosition("Gilbert", highScorePosition);
 
-        highScorePosition=calculateHighscorePosition(1000);
-        displayHighScorePosition("Louise",highScorePosition);
+        highScorePosition = calculateHighscorePosition(1000);
+        displayHighScorePosition("Louise", highScorePosition);
 
-        highScorePosition=calculateHighscorePosition(500);
-        displayHighScorePosition("Carol",highScorePosition);
+        highScorePosition = calculateHighscorePosition(500);
+        displayHighScorePosition("Carol", highScorePosition);
 
-        highScorePosition=calculateHighscorePosition(100);
-        displayHighScorePosition("Frank",highScorePosition);
+        highScorePosition = calculateHighscorePosition(100);
+        displayHighScorePosition("Frank", highScorePosition);
     }
 
-    public static void displayHighScorePosition(String playerName,int highScorePosition){
-        System.out.println(playerName+" managed to get into position "
-        +highScorePosition + " on the high score table");
+    public static void displayHighScorePosition(String playerName, int highScorePosition) {
+        System.out.println(playerName + " managed to get into position "
+                + highScorePosition + " on the high score table");
     }
 
-    public static int calculateHighscorePosition(int playerScore){
-        if(playerScore>=1000){
-            return 1;
-        }else if (playerScore>=500 && playerScore<1000){
-            return 2;
-        }else if(playerScore>=100 && playerScore<500){
-            return 3;
-        }else {
-            return 4;
+    public static int calculateHighscorePosition(int playerScore) {
+//        if(playerScore>=1000){
+//            return 1;
+//        }else if (playerScore>=500 ){
+//            return 2;
+//        }else if(playerScore>=100 ){
+//            return 3;
+//        }
+//            return 4;
+        int position = 4; //assuming position 4 will be returned
+        if (playerScore >= 1000) {
+            position = 1;
+        } else if (playerScore >= 500) {
+            position = 2;
+        } else if (playerScore >= 100) {
+            position = 3;
         }
+        return position;
     }
+
 
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
 

@@ -16,7 +16,7 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('https://www.google.com/')
 
-WebUI.setText(findTestObject('Google search/search input'), 'Google gravity')
+WebUI.setText(findTestObject('Google search/search input'), 'do a barrol roll')
 
 WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.TAB))
 
