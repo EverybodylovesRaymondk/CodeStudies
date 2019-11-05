@@ -16,9 +16,15 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('https://www.google.com/')
 
+WebUI.maximizeWindow()
+
 WebUI.setText(findTestObject('Google search/search input'), 'do a barrol roll')
 
 WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.TAB))
 
 WebUI.click(findTestObject('Google search/Im feeling lucky'))
+
+WebUI.waitForAngularLoad(5)
+
+WebUI.closeBrowser()
 
