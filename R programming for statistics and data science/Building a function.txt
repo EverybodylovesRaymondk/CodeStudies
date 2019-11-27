@@ -1,0 +1,16 @@
+ #-----------BUILDING A FUNCTION---------
+draw <- function(){
+  deck <- c ("Duke", "Assassin","Captain","Ambassador","Contessa")
+  hand <-  sample(deck,size=3,replace = T)
+  print(hand)
+
+}
+draw()
+
+
+flipCoin <- function(){
+  coin <- c("Heads","Tails")
+  flip <- sample(coin,100,T,prob=c(0.3,0.7))
+  print(flip)
+}
+flipCoin()
