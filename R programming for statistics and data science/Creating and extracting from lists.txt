@@ -1,0 +1,32 @@
+#Creating a list called my.book
+my.book <- list(Name="1984",Author="Gorge Orwell",Published=1949,
+                Contents=list(PartOne=c(1:10),
+                              PartTwo=c(1:10),
+                              PartThree=c(1:6),
+                              Appendix = "Newspeak"))
+my.book
+str(my.book)
+
+#Alternative way to name elements in a list 
+
+
+new.book = list("1984","Gorge Orwell",1949,
+                list(c(1:10),c(1:10),c(1:6),"Newspeak"))
+names(new.book)<-c("Name","Author"," Published","Contents")
+str(new.book)
+
+# The names function can't reach subsets of lists in lists
+#Extracting lists from lists is done with []
+#------------------------------------------------------------------------------------------
+  #Returns the fists 2 elements of the list as a list
+    my.book[1:2]
+  #Returns element 4(the content list) a list with the list in it     
+    my.book[4]
+
+#Extracting elements from list or sublists is done with [[]]
+  # Returns the contents list as a list
+    my.book[[4]]
+  #Returs the second element of the contents list as a list
+    my.book[[4]][2]
+  #Returns the second element of the contents list but as a vector
+    my.book[[4]][[2]] 

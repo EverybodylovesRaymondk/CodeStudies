@@ -1,0 +1,29 @@
+b.office <- c(171.5,292,281.6,460.6,139.3,288)
+
+matrix.mat <- matrix(b.office,nrow = 3, byrow = T,
+                     dimnames = list(c("The Matrix","Reloaded","Revolutions"),c("US","Worldwide")))
+matrix.mat
+
+#the values in the b.office is in milions of us dollars.
+#converting the matrix to billions requires it to be devided by 1000
+matrix.scaled <- matrix.mat/1000
+matrix.scaled
+
+#Calculating profit with average cost of a movie being 121 milion
+avg.margin<-matrix.mat-121
+avg.margin
+
+#Matix of the budgets per movie in milion dollars
+budget<- matrix(c(63,150,150),nrow = 3,ncol = 2)
+budget
+#Calculating the profit margin for each movie based on profit - budget
+margin <- matrix.mat - budget
+margin
+
+#Multiply the box office matrix with another. 
+v <- matrix(1:6,nrow=3)
+matrix.multiplied <- b.office * v
+matrix.multiplied
+#inner multiplication uses %*%
+#outer multiplication uses %o% 
+#Remember to transpose the matrix using the "t" funcition
