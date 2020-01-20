@@ -1,0 +1,11 @@
+n<- -12
+
+repeat{
+  print(paste("Your value equals to",n))
+  n = n+1
+  if(n>=5){
+    print("N is now eiher 5 or positie number")
+    print("The loop pill be broken")
+    break
+  }
+}

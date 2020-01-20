@@ -1,0 +1,12 @@
+#Remember to set the working directory to where the import files are kept 
+#eneter getwd() in console to see the current working directory. 
+#Use the session menue option to change the working directory 
+
+my.pok <- read.table("pokRdex-comma.csv",
+                      sep = ',',
+                      header = T,
+                      stringsAsFactors = F)
+my.pok
+
+my.pok <- read.csv("pokRdex-comma.csv",stringsAsFactors = F)
+my.pok

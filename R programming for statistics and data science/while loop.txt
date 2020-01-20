@@ -1,0 +1,9 @@
+n= -12
+while(n<0){
+  print("Your value stands for negative")
+}
+
+while(n<0){
+  print(paste("Your value equals",n))
+  n = n+1
+}

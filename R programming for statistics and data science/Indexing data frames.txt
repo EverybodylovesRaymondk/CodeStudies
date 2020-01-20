@@ -1,0 +1,19 @@
+library(tidyverse)
+starwars
+#Saving the table as a data frame
+my.wars<- as.data.frame(starwars)
+#removing the last 3 columns 
+my.wars <- my.wars[,-(11:13)]
+my.wars
+head(my.wars) #shows only the first 6 rows of data
+tail(my.wars) #shows only the Last 6 rows of data
+
+#Indexing data frames
+my.wars[3,9] #Returns the value in row 3 column 9
+my.wars[3,"homeworld"] #Returns the value in row 3 in the homeworld column
+my.wars[5,] #Returns all the values for row 5
+head(my.wars[,1]) #Returing the fist 6 values in colun 1
+head(my.wars[["name"]]) #Returns the fists 6 values in the column name
+
+#Returning some rows for specific columns
+my.wars[c(1:14),c("name","homeworld","species")]# Retuns the fist 14 values in the name,homeworld and species columns

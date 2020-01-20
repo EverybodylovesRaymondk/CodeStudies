@@ -1,0 +1,23 @@
+#For loop structure
+for(value in x){
+  Y
+}
+
+#examples
+
+title =c("Catch","Me","If","You","Can")
+
+for(i in title){
+  print(i)
+}
+
+#saving for loop output
+#1) Create empty object
+new.title=vector(length = 5)
+new.title
+#For every valie 1 to 5 assign the element value of title to new.title
+for(i in 1:5){
+  new.title[i] = title[i]
+}
+
+new.title
