@@ -1,0 +1,35 @@
+Name<-c("Flipper","Bromley","Nox","Orion","Dagger","Zizi","Carrie")
+Months.old<-c(53,19,34,41,84,140,109)
+Size<-c("meduim","small","meduim","Large","small","extra small","large")
+Weight<-c(21,8,4,6,7,2,36)
+Breed<-c("dog","dog","cat","cat","dog","cat","dog")
+pets<-data.frame("Name"=Name,"Months old"=Months.old,"Size"=Size,"Weight(Kg)"=Weight,"Breed"=Breed , stringsAsFactors = F)
+pets
+#adding the Vaccinated column
+Vaccinated <-c("yes","yes","no","yes","no","no","yes")
+pets<-cbind(pets,"Vaccinated"=Vaccinated)
+pets
+# adding the milo observation(row)
+milo<-data.frame(Name="Milo","Months old"=67,Size="small","Weight(Kg)"=7,Breed="dog",Vaccinated="yes")
+pets<- rbind(pets,milo)
+pets <- as.data.frame(pets)
+
+#How many rows and columns does the data frame pets have
+nrow(pets)
+ncol(pets)
+#What class is "pets"
+class(pets)
+
+#Load the diamonds data set, check if it is a data frame and if not change it to to a new data frame. 
+class(diamonds)
+diamonds.df <- as.data.frame(diamonds)
+class(diamonds.df)
+diamonds.df
+
+#Load the UsJudgeRatings data set, check the class , if not a data frame converti it to one 
+class(USJudgeRatings)
+USJudgeRatings
+my.df <- USJudgeRatings
+my.df$AVRG <- rowMeans(my.df) #rowMeans calculates the mean value per row in the data frame (my.df)
+averg <- my.df["AVRG"]
+averg

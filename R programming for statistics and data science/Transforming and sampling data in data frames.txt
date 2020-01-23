@@ -1,0 +1,44 @@
+library(tidyverse)
+
+star<- starwars
+star
+
+#Filtering data for criteria
+filter(star,species == "Droid")
+filter(star,species == "Droid",homeworld=="Tatooine")
+filter(star,eye_color=="red"|eye_color=="yellow"|eye_color == "orrange",species=="human")
+
+#Filtering data for specific columns
+select(star,name,birth_year,species,starships)
+select(star,name,homeworld:starships)
+
+#Filtering the data frame for specific columns first and then everything els
+select(star,name,vehicles,starships,everything())
+
+#Adding a variable (column) to the data frame along with the rest of the data
+star<- mutate(star,BMI=mass/((height /100)^2))
+select(star,name:BMI)
+
+#Creating a new variable (column) from a data frame and only keeping that new varible
+star.trans<-transmute(star,BMI2=mass/((height/100)^2))
+star.trans
+
+#Ordering the data frame
+arrange(star,mass)
+arrange(star,desc(mass))
+
+#Grouping and summarize the data frame
+summarise(star,avg.height=mean(height,na.rm = T)) #Returns the average hight of all the data points and removing the NA values
+
+#group by function and getting the average height per species
+star.species<-group_by(star,species)
+summarise(star.species,avg.heigt=mean(height,na.rm = T))
+
+#Extracting data from data frames
+#sample_n() Will extract a random sample from a fixed number of rows 
+#sample_frac() will extracts a random sample of a fixed fraction of rows
+
+#Sampling a random 10 rows from the data fram 
+sample_n(star,10)
+#Sampling a random 10% of the data 
+sample_frac(star,0.1)

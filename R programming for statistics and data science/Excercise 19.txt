@@ -1,0 +1,41 @@
+#Exercise 19 Data transformation with Dplyr
+#Requirements: the employees data from Exercise 17.
+
+#Load the employees data and convert it into a tibble. 
+read.csv?
+employee.data <-as.tibble( read.csv("employee-data.csv",header = T,sep = ",",skip = 23,stringsAsFactors = F))
+class(employee.data)
+employee.data
+
+#Then, make the gender and title variables into a factor.
+employee.data$gender <- as.factor(employee.data$gender)
+employee.data$title <- as.factor(employee.data$title)
+#Hint: the commands are analogous to the as.data.frame() function.
+
+#Check if the data has any missing values.
+any(is.na(employee.data))
+
+#Arrange the dataset by gender,then last name, 
+#and make first_name, last_name, and gender the first three variables in the data frame. 
+#Use the ends_with() function with select.
+#Show only the employees whose salary is higher than 70,000.
+
+emplyee.high.earnings <- employee.data %>% #Create the data frame
+  select(ends_with("name"),gender,everything())%>% # selecting the name and gender colums af the first columns 
+  filter(salary >= 70000)%>% # filtering the data frame for records where the salary is more than 70 000
+  arrange(gender,last_name) # arranging the data by gender and then last name 
+
+emplyee.high.earnings
+#Create a data frame containing only the employee numbers of those earning more than 70,000.
+employee.nr.highearnings <- emplyee.high.earnings["emp_no"]
+employee.nr.highearnings
+
+#Find out how much each position (title) earns on average by gender; 
+#create a new variable that represents the average monthly figures 
+#and arrange your result by gender and average monthly salary, from largest to smallest.
+earnings.gender<-employee.data%>%
+  group_by(title,gender)%>%
+  summarise(avg.salary = mean(salary))%>%
+  mutate(monthly = avg.salary/12)%>%
+  arrange(gender,desc(monthly))
+earnings.gender

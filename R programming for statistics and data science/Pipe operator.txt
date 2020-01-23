@@ -1,0 +1,11 @@
+#The Pype operator
+#this will let you perform operations on data in sequences
+#Call the data %>%
+#define firs operation 
+#use the pipe operator (%>%)
+#define next operator. 
+
+star %>%
+  group_by(species) %>%
+  summarise(count = n(),mass=mean(mass,na.rm = T))%>%
+  filter(count>1)
