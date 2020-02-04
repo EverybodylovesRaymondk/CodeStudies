@@ -1,0 +1,23 @@
+library(tidyverse)
+#Loading Titanic data from work directory "Lesson 91"
+df<-as.tibble(read.csv("titanic.csv",header = T,  stringsAsFactors = F))
+#Setting the survived column as a factor
+df$Survived<- as.factor(df$Survived)
+#Creating plot where x is sex and the fill is by survived factor 0 being no and 1 being yes
+bar<-ggplot(df,aes(x=Sex, fill=Survived))
+#creating the bar chart polt
+bar + geom_bar() + theme_dark()+
+#labeling the y,x and title of the plot
+  labs(y="Passenger Count", 
+       x = "Gender",
+       title = "Survival rate on the Titanic by class and sex")+
+#Splitting the plot by sex and passenger class
+  facet_wrap(Sex~Pclass)
+
+#Creating histogram showing the age ranges of people on titanic and how many survived or died per age range
+hist <-ggplot(data = df,aes(x=Age,fill=Survived))
+hist + geom_histogram(binwidth = 5,color ="White")+
+  labs(y="Number of Passenger",
+       x="Age",
+       title = "Age Distribution on Titanic")+
+  theme_light()

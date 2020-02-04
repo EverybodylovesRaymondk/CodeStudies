@@ -1,0 +1,13 @@
+Working library = lesson 92
+library(tidyverse)
+df<-as.tibble(read.csv("employee-data.csv",header = T, skip = 23, stringsAsFactors = F))
+str(df)
+top.earn<-filter(df,salary>=45000)
+
+hist<-ggplot(df,aes(x=salary))
+hist+geom_histogram(binwidth = 5000,color = 'darkslategray',fill="darkseagreen2",alpha=0.7)+
+  ggtitle("Title distrubtuion in the employee data")+
+  labs(x="Salary",y="Nmber of employees in the salary bucket")+
+  #theme_minimal(base_size = 15,base_family = "serir")
+  ggthemes::theme_solarized_2(light = F,base_size = 15,base_family = "serif")
+

@@ -1,0 +1,28 @@
+Working directory lesson 89. 
+library(tidyverse)
+hdi<-as.tibble(read.csv("hdi-cpi.csv",header = T, stringsAsFactors = F))
+hdi
+str(hdi)
+
+#Creating ggplot for data only
+sc<-ggplot(hdi)
+#Creating ggplot for data adding astetics (x and Y values)
+sc<-ggplot(hdi,aes(CPI.2015, HDI.2015))
+sc
+#Creating ggpolot for SC now having X and Y values and adding geometry points
+sc+geom_point()
+
+#Splitting the plot by region (Facets)
+sc+geom_point()+ facet_grid(Region ~.)
+
+#Applying the Statistics layer e.g. calculating the mean of Y based on X 
+
+sc+geom_point(aes(color=Region),size=3)+ facet_grid(Region ~.)+
+  stat_smooth()
+
+#filtering data for coordinates, countries in the upper qaurtile of the CPI indes
+sc+geom_point(aes(color=Region),size=3)+ facet_grid(Region ~.)+
+  stat_smooth() + coord_cartesian(xlim = c(0.75,1))
+#Applying a theme
+sc+geom_point(aes(color=Region),size=3)+ stat_smooth() +
+  theme_minimal()

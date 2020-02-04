@@ -1,0 +1,25 @@
+library(tidyverse)
+df<-as.tibble(read.csv("titanic.csv",header = T, stringsAsFactors = F))
+
+df$Survived <- as.factor(df$Survived)
+df$Pclass<-as.factor(df$Pclass)
+df$Sex<-as.factor(df$Sex)
+df$Embarked<-as.factor(df$Embarked)
+df
+
+#Creating histogram
+
+hist<-ggplot(data=df,aes(x=Age))
+#Creating the histogram plot
+  hist + geom_histogram(
+    #Stting the size of the bars on the x aces 0-5 5-10 ect. 
+      binwidth = 5 , 
+    #Stting color and fill of bars
+      color = 'darkslategray',fill="darkslategray4",
+      alpha=0.5) +
+    #Adding a chart titile
+      ggtitle("Age Distribution on the Titanic") + 
+    #adding names to y and x axis
+      labs(y="Number of Passangers",x="Age") + 
+    #Setting the theme of the chart
+    theme_minimal()

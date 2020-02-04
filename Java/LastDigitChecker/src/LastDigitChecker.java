@@ -27,6 +27,8 @@ hasSameLastDigit (9, 99, 999); → should return false since 9 is not within the
         int thirdNumDigit = thirdNumber % 10;
 
         return true;
+
+
 /*Write another method named isValid with one parameter of type int.
 
 The method needs to return true if the number parameter is in range of 10(inclusive) - 1000(inclusive),
@@ -41,6 +43,3 @@ isValid(468); → should return true since 468 is within the range of 10-1000
 isValid(1051); → should return false since 1051 is not within the range of 10-1000*/
     }
 }
-
-
-

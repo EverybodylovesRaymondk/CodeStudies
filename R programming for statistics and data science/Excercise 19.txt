@@ -1,3 +1,5 @@
+#Loading tidyverse
+library(tidyverse)
 #Exercise 19 Data transformation with Dplyr
 #Requirements: the employees data from Exercise 17.
 
@@ -33,9 +35,10 @@ employee.nr.highearnings
 #Find out how much each position (title) earns on average by gender; 
 #create a new variable that represents the average monthly figures 
 #and arrange your result by gender and average monthly salary, from largest to smallest.
-earnings.gender<-employee.data%>%
-  group_by(title,gender)%>%
-  summarise(avg.salary = mean(salary))%>%
-  mutate(monthly = avg.salary/12)%>%
-  arrange(gender,desc(monthly))
+
+earnings.gender<-employee.data%>% #cREATING NEW DATA FRAME FROM THE EMPLOYEE.DATA 
+  group_by(title,gender)%>%  #GROUPING THE DATA FRAME BY TITLE AND GENDER
+  summarise(avg.salary = mean(salary))%>% #SUMMARISING THE DATA FRAME AS THE MEAN OF SALARIES
+  mutate(monthly = avg.salary/12)%>% # MUTATE(ADDING A COLUMN) " MONTLY AS THE AVERAGE SALARY PER MONTH
+  arrange(gender,desc(monthly)) #SORTING(ARRANGING) THE DATA BY AVERAGE MONTHLY SALARY FROM HIGHEST TO LOWEST 
 earnings.gender

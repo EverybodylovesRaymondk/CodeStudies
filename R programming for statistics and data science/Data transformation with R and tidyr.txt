@@ -1,0 +1,48 @@
+#Set working directory to Lesson 84
+library(tidyverse)
+billboard.data <- as.tibble(read.csv("billboard.csv", header = T, sep=",",stringsAsFactors = F))
+billboard.data
+str(billboard.data)
+
+#Gather reorganizes data with values as column names 
+billboard.data>%>
+  gather(billboard.data,x1st.week:x76th.week, key = "Week",  # gathers colums from x1st.week to x76th.week and assigning them into the new column called week 
+         value = "Rank", na.rm = T)%>% # taking the values of those columns and adding them to a new column called rank 
+  arrange(artist.inverted)
+# this wil return a data frame where in the week column each line will have its rank in the rank column relating to that week
+
+tb<- as.tibble(read.csv("tb.csv",header = T,sep = ",",stringsAsFactors = F))
+tb
+str(tb)
+
+
+tb.data <- tb %>% gather(m.014:f.65, key = "column",value = "cases", na.rm = T) %>%
+  arrange(country)
+tb.data
+
+#Seperating the column "column into 2 colums sex, and age
+tb.seperate <- tb.data %>% separate(column , into = c("sex","age"))
+tb.seperate
+#Using R string to fix column age's values
+tb.seperate$age <- str_replace_all(tb.seperate$age, "0","0-")
+tb.seperate$age <- str_replace_all(tb.seperate$age, "15","15-")
+tb.seperate$age <- str_replace_all(tb.seperate$age, "25","25-")
+tb.seperate$age <- str_replace_all(tb.seperate$age, "35","35-")
+tb.seperate$age <- str_replace_all(tb.seperate$age, "45","45-")
+tb.seperate$age <- str_replace_all(tb.seperate$age, "55","55-")
+tb.seperate$age <- str_replace_all(tb.seperate$age, "65","65-100")
+tb.seperate
+
+#Seperating age now in a low and high value
+tb.seperate <- tb.seperate%>% separate(age,into = c("Age.low","Age.high"))
+tb.seperate
+#uniting the age high and low columns note seperater defaults to under score
+tb.united <- tb.seperate%>% unite("Age.new",c("Age.low","Age.high"))
+tb.united
+#Loadinding a new data frame
+weather <- as.tibble(read.csv("weather.csv"))
+weather
+
+#Using spread to spread the element column into its value's tmin&tmax 
+weather.spread <- spread(weather,key = element,value = value)
+weather.spread
