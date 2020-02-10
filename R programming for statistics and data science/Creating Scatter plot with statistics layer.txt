@@ -1,0 +1,14 @@
+#Creating scatter plots 
+#Set work directory to Lesson 89
+library(tidyverse)
+df<-as.tibble(read.csv("hdi-cpi.csv", header = T,sep = ',',stringsAsFactors = T))
+str(df)
+sp<-ggplot(df,aes(CPI.2015,HDI.2015))
+sp+geom_point(aes(color=Region),shape = 21,
+              fill="white",size=3,stroke=2)+
+theme_light(base_size = 8,base_family = "Arial")+
+  labs(x="Corruption Perception Index, 2015",
+       y="Human Development Index, 2015",
+       title="Corruption and human development")+ 
+  stat_smooth(se = F) +
+  stat_density_2d()

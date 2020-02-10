@@ -1,0 +1,10 @@
+library(tidyverse)
+
+df <- as.tibble(read.csv("titanic.csv",header = T, sep = ',',stringsAsFactors = T))
+df$Survived<-as.character(df$Survived)
+box<-ggplot(df,aes(x=Survived,y=Age))
+box+geom_boxplot(outlier.color = "Red",outlier.shape = 7)+
+  geom_jitter(width = 0.2,aes(color=Sex))+
+  labs(title = "Survival Rate on the Titanic Based on Age and Gender")+
+    theme_gray()+
+  coord_flip()

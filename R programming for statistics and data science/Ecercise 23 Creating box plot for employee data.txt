@@ -1,0 +1,14 @@
+#Creating a box plot per title for salaries paid by gender
+#setWD to lesson 91
+df<-as.tibble(read.csv("employee-data.csv",header = T, skip = 23, stringsAsFactors = F))
+str(df)
+dfT<-filter(df,salary>=45000)
+
+box<-ggplot(dfT,aes(x=title,y=salary))
+box+geom_boxplot(outlier.color = "Red",outlier.shape = 7)+ 
+  geom_jitter(width = 0.3,aes(color=gender))+
+    labs(title = "Salary distribution",subtitle = "based on position and gender",
+       x="Title",
+       Y = "Salary")+
+  theme(legend.position = "right",axis.text.x = element_text(angle = 90, hjust=1))+
+  coord_flip()

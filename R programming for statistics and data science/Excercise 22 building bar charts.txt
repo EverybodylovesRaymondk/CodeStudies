@@ -1,0 +1,20 @@
+library(tidyverse)
+#Loading Titanic data from work directory "Lesson 91"
+df<-as.tibble(read.csv("employee-data.csv",header = T,skip = 23,  stringsAsFactors = F))
+str(df)
+df$gender<-as.factor(df$gender)
+df$title<-as.factor(df$title)
+
+bar<-ggplot(data= df,aes(x=title,fill=gender))
+bar + geom_bar()+ggthemes::theme_fivethirtyeight()+
+  scale_fill_manual(values = c("chartreuse4","darkorange"))
+  labs(Y="Number of Employees" ,
+       x = "Title",
+       title = "Job positions by gender")
+  
+#Different fill and distribution example  
+  bar <- ggplot(df, aes(gender, fill = title)) 
+  bar + geom_bar() + ggthemes::theme_fivethirtyeight() + 
+    scale_fill_manual(values = c("magenta", "darkorange", "midnightblue",
+                                 "springgreen4", "brown1", "gold")) +
+    labs(title = "Job Positions by Gender")
