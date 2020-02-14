@@ -1,0 +1,28 @@
+library(tidyverse)
+col.1<-c(1,1,1,1,2,2,2,2,2,2,3,3,3,3,4,4,5,5,7)
+col.2<-c(1,1,2,2,3,3,3,4,4,4,4,4,5,5,5,6,6,7,7)
+col.3<-c(1,2,3,3,4,4,4,5,5,5,5,6,6,6,6,6,6,7,7)
+
+df<-data_frame(col.1,col.2,col.3)
+summary(df)
+pl.1<-ggplot(df,aes(x=col.1))+
+  geom_histogram(binwidth = 1,color="white",fill="red4")+
+  theme_light()+
+  labs(title = "Positive Skew")
+
+pl.2<-ggplot(df,aes(x=col.2))+
+  geom_histogram(binwidth = 1,color="white",fill="red4")+
+  theme_light()+
+  labs(title = "Zero Skew")
+
+pl.3<-ggplot(df,aes(x=col.3))+
+  geom_histogram(binwidth = 1,color="white",fill="red4")+
+  theme_light()+
+  labs(title = "Negative Skew")
+pl.1
+pl.2
+pl.3
+#Notes
+#If mean >median then it is positve(right) skew the outliers are on the right
+#if mean == median then it is zero (semetrically) i.e now skew
+#if mean < median then it is a negative(left) skew the outliers or on the left 

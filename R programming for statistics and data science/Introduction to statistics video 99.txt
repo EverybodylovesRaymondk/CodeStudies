@@ -1,0 +1,16 @@
+library(tidyverse)
+ny<-c(1,2,3,3,5,6,7,8,9,11,66)
+la<-c(1,2,3,4,5,6,7,8,9,10,11)
+pizza<-data_frame(ny,la)
+pizza
+#Mean is also known as sample average
+mean(pizza$ny) # Note that the outlier 66 is changing the mean
+mean(pizza$la)
+#Median is the middle value of a ordered sample range
+median(pizza$ny)
+#Mode is the value of a data set that occures the most 
+x<-table(pizza$ny) #Creates a contingency table showing the frequency distrubtion of the data i.e unique values and how many times they have occured in the data set
+x
+names(x)[which(x == max(x))]
+#easy wat to gain insight of the entire data set Pizza. 
+summary(pizza)

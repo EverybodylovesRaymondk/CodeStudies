@@ -1,0 +1,19 @@
+#Set WD to lesson 101
+library(tidyverse)
+sk1<-read.csv("skew-1.csv")
+sk2<-read.csv("skew-2.csv")
+
+skew1<-ggplot(sk1,aes(x=Dataset.1))+
+  geom_histogram(binwidth = 100,color="white",fill="red4")+
+  theme_light()+
+  labs(title = "Positive skew",subtitle = "mean>median")
+skew1
+
+skew2<-ggplot(sk2,aes(x=Dataset.2))+
+  geom_histogram(binwidth = 100,color="white",fill="red4")+
+  theme_light()+
+  labs(title = "Negative skew",subtitle = "mean<median")
+skew2
+
+skwC<-data_frame(sk1,sk2)
+summary(skwC)
