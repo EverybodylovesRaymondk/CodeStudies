@@ -1,0 +1,26 @@
+library(tidyverse)
+homes<-as.tibble(read.csv("landdata-states.csv",stringsAsFactors = F))
+nrow(homes)
+homes %>% subset(Date==2001.25) %>% ggplot(aes(y=Structure.Cost,
+                                           x=log(Land.Value)))+
+  geom_point()+theme_light()+
+  labs(x="Land Vlue(transformed",
+       y= "Structure Cost(USD)",
+       title="Relationship between land value and structure cost")+
+  stat_smooth(se=F)
+
+cor(homes$Structure.Cost,homes$Land.Value)
+
+A<-c(1,2,3,4,5,6,7,8,9)
+B<-c(1,2,3,4,5,6,7,8,9)
+x<-data_frame(A,B)
+x
+cor(x$A,x$B)
+
+xhist <-ggplot(x,aes(x=A,y=B))
+xhist + geom_point()+theme_light()+
+  labs(x="A",
+       y="B",
+       title="Perfect correlation of 1")+
+  stat_smooth(se=F)
+cor(x$A,x$B)

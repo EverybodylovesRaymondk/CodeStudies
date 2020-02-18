@@ -1,0 +1,66 @@
+#Setting work directory Lesson 104
+library(tidyverse)
+PracProd <-as.tibble(read.csv("practical-product.csv",stringsAsFactors = F))
+str(PracProd)
+
+PracCus <-as.tibble(read.csv("practical-customer.csv",stringsAsFactors = F))
+str(PracCus)
+
+#Task 1 
+typeof(PracCus$Customer.ID) #Categorical data
+typeof(PracCus$Mortgage)#Categorial data
+typeof(PracProd$Year.of.sale) # Numerical discreat inteval
+
+#Task 2
+hg <-ggplot(PracProd,aes(x=Price))
+hg + geom_histogram(binwidth = 50000,
+                    color="darkslategray",
+                    fill="darkslategray4",
+                    alpa = 0.5)+
+  labs(x="Price",
+       y="NR of Houses",
+       title= "House Prices Freqency distrubution")+
+  theme_minimal()+
+  scale_x_continuous(labels = scales::comma_format())
+  
+
+#Task 3 
+#the most houses are between 200 - 300 k
+
+#Task 4
+
+sc<- ggplot(PracProd,aes(y=PracProd$Price,
+                         x=PracProd$Area..ft..,))
+sc+ geom_point(aes(color=PracProd$Type.of.property))+
+  theme_light()+
+  labs(x="Area",
+       y="price",
+       title = "Relationship between price and SQR Ft")+
+  scale_x_continuous(labels = scales::comma_format())+
+  scale_y_continuous(labels = scales::comma_format())+
+  stat_smooth(se=F)
+
+#Task 5
+mean(PracProd$Price)
+median(PracProd$Price)
+
+library(psych)     
+describe(PracProd$Price)
+summary(PracProd$Price)
+#Creating a function to return the mode
+mode <- function(x){ 
+  ta <- table(x)
+  tam <- max(ta)
+  if (all(ta == tam))
+    mod <- NA
+  else
+    if(is.numeric(x))
+      mod <- as.numeric(names(ta)[ta == tam])
+  else
+    mod <- names(ta)[ta == tam]
+  return(mod)
+}
+mode(PracProd$Price)
+
+#Task 7 
+cor.test(PracProd$Price,PracProd$Area..ft..)

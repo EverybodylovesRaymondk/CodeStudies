@@ -9,4 +9,4 @@ sapply(pizza, var)
 sapply(pizza,mean)
 sapply(pizza,sd)
 coef.var<-sapply(pizza,sd)/sapply(pizza,mean)
-coef.var
+coef.var	
