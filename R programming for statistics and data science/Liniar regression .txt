@@ -1,0 +1,20 @@
+#set wd to lesson 120
+library(tidyverse)
+library(psych)
+
+college<-read.csv("regression example.csv")
+college
+describe(college)
+
+linmod <- lm(GPA~SAT,data = college)
+
+ggplot(college , aes(SAT,GPA))+
+  geom_point()+
+  theme_light()+
+  labs(x="SAT Scores",
+       y="GPA upon graduation",
+       title = "SAT AND GPA") +
+  stat_smooth(method = "lm", se=F)
+
+summary(linmod)
+

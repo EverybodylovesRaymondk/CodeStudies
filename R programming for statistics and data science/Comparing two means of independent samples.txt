@@ -1,0 +1,14 @@
+#set wd to lesson 116
+library(tidyverse)
+library(psych)
+
+grades<-read.csv("independant samples.csv")
+grades
+
+grades <- gather (grades, Engineering , Management, 
+                key = "course",
+                value = "grades")
+grades
+
+ind.t.test <- t.test(grades~course , data = grades , mu = -4)
+ind.t.test

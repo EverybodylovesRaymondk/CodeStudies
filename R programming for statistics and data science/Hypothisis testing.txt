@@ -1,0 +1,31 @@
+#Set WD to lesson 109
+library(tidyverse)
+library(psych)
+sal<- read.csv("ztest-a.csv", stringsAsFactors = T)
+sal
+summary(sal)
+#Calculating the z table value
+z.test <- function(a, mu, sd){
+  zeta = (mean(a)-mu) / (sd/sqrt(length(a)))
+  return(zeta)
+}
+
+z.test(a = sal$salary,mu = 113000, sd = 15000)
+
+
+#Set WD to lesson 114
+#Estimate if the open rate is greater than 40 % 
+#Ho : open rate <= 0.4
+#H1 : open rate > 0.4
+library(tidyverse)
+library(psych)
+rate<- read.csv("original.csv", stringsAsFactors = T)
+rate
+describe(rate)
+
+my.t.test <- function (a, hmean){
+  t<-(mean(a)-hmean)/ (sd(a)/sqrt(length(a)))
+  return(t)
+}
+
+my.t.test(rate$Open.rate,0.4)

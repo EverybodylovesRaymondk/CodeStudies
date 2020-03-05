@@ -1,0 +1,13 @@
+#Set WD to lesson 114
+
+library(tidyverse)
+library(psych)
+library(pastecs)
+magn<- read.csv("original.csv", stringsAsFactors = T)
+magn
+describe(magn)
+
+dep.t.test <- t.test(magn$Before, magn$After, paired = T, alternative = "l")
+dep.t.test
+
+stat.desc(magn)
