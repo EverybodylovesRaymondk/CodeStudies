@@ -23,5 +23,6 @@ x = 0
 
 while x<5:
     if x==2:
-        print(x)
+        break
+    print(x)
     x=x+1
