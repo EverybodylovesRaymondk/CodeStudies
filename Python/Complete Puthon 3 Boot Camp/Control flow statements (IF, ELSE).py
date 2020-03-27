@@ -17,7 +17,7 @@
     
 name = input(str("Enter your code name: "))
 if name =="Frankie":
-    print("Hellow Frankie you are not allowd into the system")
+    print("Hello Frankie you are not allowd into the system")
 elif name =="Sammy":
     print("Hello Sammy you are now entering the system")
 else : 
