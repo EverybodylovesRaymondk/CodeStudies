@@ -3,7 +3,7 @@
 #Note the *args will be kept in a touple 
 #Note the term args can be changed to anything e.g. *samples
 def myfunc(*args):
-    return sum(args)
+    return (args)
 
 print(myfunc(60,40,80,20))
 
@@ -11,6 +11,7 @@ print(myfunc(60,40,80,20))
 #Note these parameters will create a dictionary
 #The function will return the value assigned to the key word fruit
 #Note the term kwargs can be changed to anything e.g. *samples
+
 def myfunct(**kwargs):
     '''This function returns the value assigned to the keyword 'fruit' or that no fruit was found'''
     if "fruit" in kwargs:

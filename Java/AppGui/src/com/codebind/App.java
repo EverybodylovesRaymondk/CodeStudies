@@ -7,19 +7,19 @@ import java.awt.event.ActionListener;
 public class App {
     private JButton okButton;
     private JPanel pannelMain;
-    private JFormattedTextField enterNameHereFormattedTextField;
+    private JFormattedTextField name_input;
 
     public App() {
         okButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null,"Hello World");
+                JOptionPane.showMessageDialog(null, "Hello World");
             }
         });
     }
 
     public static void main(String[] args) {
-        JFrame frame=new JFrame("App");
+        JFrame frame = new JFrame("App");
         frame.setContentPane(new App().pannelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();

@@ -24,14 +24,16 @@
               <text value="Ok"/>
             </properties>
           </component>
-          <component id="f9eaa" class="javax.swing.JFormattedTextField" binding="enterNameHereFormattedTextField" default-binding="true">
+          <component id="f9eaa" class="javax.swing.JFormattedTextField" binding="name_input">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
             <properties>
-              <text value="Enter name here"/>
+              <dropMode value="INSERT"/>
+              <text value="Name : " noi18n="true"/>
+              <toolTipText value="Enter name"/>
             </properties>
           </component>
         </children>
