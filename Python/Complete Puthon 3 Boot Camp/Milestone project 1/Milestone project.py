@@ -12,8 +12,8 @@ def display_board(board):
     print(board[1] + ' | ' + board[2] + ' | ' + board[3])
 
 
-test_board = [' '] * 10
-test_board2 = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
+#test_board = [' '] * 10
+#test_board2 = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
 
 
 # Test display board
@@ -22,9 +22,12 @@ test_board2 = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
 #########################################################################
 
 def player_input():
+    '''
+    Ask Player 1 to choose X or O, Then returns a touple with the applicable combination of markers between player 1 and 2
+    '''
     marker = ''
 
-    while not (marker == 'X' or marker == 'O'):
+    while not (marker == 'X' or marker == 'O'): 
         marker = input('Player 1: Do you want to be X or O? ').upper()
 
     if marker == 'X':
@@ -40,6 +43,9 @@ def player_input():
 #########################################################################
 
 def place_marker(board, marker, position):
+    '''
+    Will place the player's marker on the selected position
+    '''
     board[position] = marker
 
 
@@ -50,6 +56,9 @@ def place_marker(board, marker, position):
 #########################################################################
 
 def win_check(board, mark):
+    '''
+    This function looks for a winning combination of markers and positions
+    '''
     return (
         # Horisontal
             (board[7] == mark and board[8] == mark and board[9] == mark) or  # Top
@@ -73,8 +82,10 @@ def win_check(board, mark):
 
 import random
 
-
 def choose_first():
+    '''
+    Usint the randomint of 0 or 1 this function decides which player will go first.
+    '''
     if random.randint(0, 1) == 0:
         return 'Player 2'
     else:
@@ -87,12 +98,18 @@ def choose_first():
 #########################################################################
 
 def space_check(board, position):
+    '''
+    This checks if a given position is empty thus available to play
+    '''
     return board[position] == ' '
 
 
 #########################################################################
 
 def full_board_check(board):
+    '''
+    The function uses the space-check function and will return false if there is still space available.
+    '''
     for i in range(1, 10):
         if space_check(board, i):
             return False
@@ -102,6 +119,9 @@ def full_board_check(board):
 #########################################################################
 
 def player_choice(board):
+    '''
+    The function asks a player to choose a position to place his assigned marker. Returning the position. 
+    '''
     position = 0
 
     while position not in [1, 2, 3, 4, 5, 6, 7, 8, 9] or not space_check(board, position):
@@ -113,6 +133,9 @@ def player_choice(board):
 #########################################################################
 
 def replay():
+    '''
+    This function when "Yes" will restart the game 
+    '''
     return input('Do you want to play again? Enter Yes or No: ').lower().startswith('y')
 
 
@@ -126,6 +149,7 @@ while True:
     theBoard = [' '] * 10
     player1_marker, player2_marker = player_input()
     turn = choose_first()
+    print('\n' * 50)
     print(turn + ' will go first.')
 
     play_game = input('Are you ready to play? Enter Yes or No.')

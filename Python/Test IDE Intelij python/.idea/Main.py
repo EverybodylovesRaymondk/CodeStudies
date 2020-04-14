@@ -15,6 +15,7 @@ def display_board(board):
 test_board = [' '] * 10
 test_board2 = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
 
+#Look at pyQT / QTDesigner
 
 # Test display board
 # display_board(test_board)
@@ -176,3 +177,5 @@ while True:
 
     if not replay():
         break
+
+
