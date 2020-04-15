@@ -101,3 +101,24 @@ fido=Dog3("Fido")
 isis=Cat3("Isis")
 print(fido.speak())
 print(isis.speak())   
+
+
+######################   Methods that will effect an attribute   ##################
+
+class Simple():
+    
+    def __init__(self,value):
+        self.value=value
+        
+    def __str__(self):
+        return str(self.value)
+   
+    #This method will effect the atrubute value by adding an amount to it 
+    def add_to_value(self,amount):
+        self.value = self.value + amount
+
+myS=Simple(100)
+print(myS)
+
+myS.add_to_value(200)
+print(myS)
