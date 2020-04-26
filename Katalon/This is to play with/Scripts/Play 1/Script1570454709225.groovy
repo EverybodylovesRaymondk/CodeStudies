@@ -20,11 +20,11 @@ WebUI.maximizeWindow()
 
 WebUI.setText(findTestObject('Google search/search input'), 'do a barrol roll')
 
-WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.TAB))
+WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.ENTER))
 
 WebUI.click(findTestObject('Google search/Im feeling lucky'))
 
-WebUI.waitForAngularLoad(5)
+not_run: WebUI.waitForAngularLoad(5)
 
-WebUI.closeBrowser()
+not_run: WebUI.closeBrowser()
 
