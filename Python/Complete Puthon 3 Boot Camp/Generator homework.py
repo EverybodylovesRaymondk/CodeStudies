@@ -1,6 +1,7 @@
 #Generator homework
 import math
 import random
+
 ####Problem 1#####
 
 print("Problem 1")
