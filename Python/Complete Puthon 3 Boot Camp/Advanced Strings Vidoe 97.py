@@ -14,4 +14,3 @@ print(s + '\tHi') #using \t will print out a tab between the string and the next
 s='hello'
 print(s.isalnum())
 print(s.endswith('o')) # checking if s ends with letter o
-
