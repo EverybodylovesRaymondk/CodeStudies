@@ -5,9 +5,8 @@ import math
 
 print(pd.__version__)
 
-file = pd.read_excel('PlayPython.xlsx','Sheet1', index_col=None)
-
-print(file)
+file=pd.DataFrame(pd.read_excel('PlayPython.xlsx'))
+print(file['X'][0])
 
 
 class BMI():
