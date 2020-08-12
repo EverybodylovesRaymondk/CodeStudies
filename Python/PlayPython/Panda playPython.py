@@ -3,10 +3,10 @@
 #import pandas as pd
 #import math
 #
-#print(pd.__version__)
-#
-#file=pd.DataFrame(pd.read_excel('PlayPython.xlsx'))
-#print(file['X'][0])
+##print(pd.__version__)
+##
+##file=pd.DataFrame(pd.read_excel('PlayPython.xlsx'))
+##print(file['X'][0])
 #
 #
 #class BMI():
@@ -28,17 +28,13 @@
 #
 #print(BMI.calculate())
 
-koshuis=['K1','K2','K3']
+import tkinter
 
-skool =['K1','K2','K4','K5']
-
-def Hostal(X):
-    for i in skool:
-        if i in koshuis:
-            print("Hostal")
-        else:
-            print("Not Hostal")
-
-    return i
-
-Hostal(skool)
+root = Tk()
+name=input('What is your name: ')
+#Creating a lable widget
+myLabel = Label(root,text='Hello {}!'.format(name))
+#Shoving the label onto the screen.
+myLabel.pack()
+#createing an event loop
+root.mainloop()
