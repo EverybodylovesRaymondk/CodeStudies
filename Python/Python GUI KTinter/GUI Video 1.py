@@ -1,7 +1,7 @@
-import tkinter
+import tkinter as Tk
 
 root = Tk()
 text = input('What is yout name ? ')
-myLabel = Label(root, text='Hello {}'.format(text))
+myLabel = Tk.Label(root, text='Hello {}'.format(text))
 myLabel.pack()
 root.mainloop()
