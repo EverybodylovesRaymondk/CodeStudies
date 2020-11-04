@@ -28,13 +28,8 @@
 #
 #print(BMI.calculate())
 
-import tkinter
+import webbrowser
+url = ['https://soundcloud.com/stream','https://www.youtube.com/watch?v=OH35NiBsqOs&list=RD5RHlrQGCuJQ&index=8&ab_channel=NewAgeWave']
 
-root = Tk()
-name=input('What is your name: ')
-#Creating a lable widget
-myLabel = Label(root,text='Hello {}!'.format(name))
-#Shoving the label onto the screen.
-myLabel.pack()
-#createing an event loop
-root.mainloop()
+for u in url :
+    open_google = webbrowser.get('windows-default').open(u)
