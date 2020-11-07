@@ -22,6 +22,6 @@ for k,u in urls.items():
         y = (dt_string,k + ' is online ['+str(status)+']')
         outputS = y[0] +' '+ y[1]
         f.write(outputS + '\n')
-        #open_google = webbrowser.get('windows-default').open(u)
+        open_google = webbrowser.get('windows-default').open(u)
 f.close()
 print(dt.now())
