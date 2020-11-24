@@ -4,7 +4,7 @@ import webbrowser
 
 print(dt.now())
 
-urls = {"Confluence":'https://app.icetech.io/confluence',"Jira":'https://app.icetech.io/jira'}
+urls = {"Confluence":'https://app.icetech.io/confluence',"Jira":'https://app.icetech.io/jira',"yOUTUBE":'http://www.youtube.com'}
 
 dt_string = dt.now().strftime("%b %d %H:%M")
 f = open("OUTPUT.TXT","w")
