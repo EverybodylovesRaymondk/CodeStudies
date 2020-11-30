@@ -14,3 +14,20 @@
 2020-11-11 17:56:03.692652	NTSA Navigation Complete
 2020-11-11 17:56:04.918933	Activity Searched
 2020-11-11 17:56:04.918933 	BOM Metadata Maintenance Test Successfull
+2020-11-27 15:36:48.198687	login Started
+2020-11-27 15:36:54.981257	login completed
+2020-11-27 15:36:58.573982	NTSA Navigation Complete
+2020-11-27 15:36:59.351760	Activity Searched
+2020-11-27 15:36:59.351760 	BOM Metadata Maintenance Test Successfull
+2020-11-27 15:39:59.217844	login Started
+2020-11-27 15:40:06.720773	login completed
+2020-11-27 15:40:11.128024	NTSA Navigation Complete
+2020-11-27 15:40:11.791657	Activity Searched
+2020-11-27 15:40:11.791657 	BOM Metadata Maintenance Test Successfull
+2020-11-27 19:24:51.430985	login Started
+2020-11-27 19:24:59.585715	login completed
+2020-11-27 19:25:34.138208	login Started
+2020-11-27 19:25:42.318602	login completed
+2020-11-27 19:25:45.339141	NTSA Navigation Complete
+2020-11-27 19:25:46.903809	Activity Searched
+2020-11-27 19:25:46.903809 	BOM Metadata Maintenance Test Successfull
