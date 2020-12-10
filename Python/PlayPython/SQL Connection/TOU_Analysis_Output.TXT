@@ -1,0 +1,22 @@
+TOU Analysis Results: (24/10 - 27/10)
+
+Day 24
+1)TOU consumption = 0.1 kWh
+2)Total consumption = 0.18 kWh
+3)Difference = 0.08 kWh
+
+Day 25
+1)TOU consumption = 0.13 kWh
+2)Total consumption = 0.15 kWh
+3)Difference = 0.02 kWh
+
+Day 26
+1)TOU consumption = 0.15 kWh
+2)Total consumption = 0.16 kWh
+3)Difference = 0.01 kWh
+
+Day 27
+1)TOU consumption = 0 kWh
+2)Total consumption = 0 kWh
+3)Difference = 0 kWh
+
