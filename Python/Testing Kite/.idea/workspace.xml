@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5ad0f1f-abc6-4ef8-b47d-903717099ae7" name="Default Changelist" comment="" />
+    <list default="true" id="c5ad0f1f-abc6-4ef8-b47d-903717099ae7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +28,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Java/ForLoop" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -57,17 +60,13 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="872" y="179" key="#Plugins" timestamp="1610391835667">
+    <state x="960" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1621192101853">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="872" y="179" key="#Plugins/-1280.115.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1610391835667" />
-    <state x="662" y="141" key="new project wizard" timestamp="1610993797893">
+    <state x="960" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1040/-1280.115.1280.984@0.0.2560.1040" timestamp="1621192101853" />
+    <state x="1060" y="274" key="FileChooserDialogImpl" timestamp="1621192427707">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="662" y="141" key="new project wizard/0.0.2560.1040/-1280.115.1280.984@0.0.2560.1040" timestamp="1610993797893" />
-    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1610391812440">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup/-1280.115.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1610391812440" />
+    <state x="1060" y="274" key="FileChooserDialogImpl/0.0.2560.1040/-1280.115.1280.984@0.0.2560.1040" timestamp="1621192427707" />
   </component>
 </project>
