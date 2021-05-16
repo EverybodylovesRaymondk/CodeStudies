@@ -51,3 +51,64 @@
 2020-12-14 09:28:43.087390	NTSA Navigation Complete
 2020-12-14 09:28:43.680841	Activity Searched
 2020-12-14 09:28:43.680841 	BOM Metadata Maintenance Test Successfull
+2021-01-14 20:34:48.006253	login Started
+2021-01-25 11:30:25.013540	login Started
+2021-01-25 11:30:33.629993	login completed
+2021-01-25 11:30:37.417816	NTSA Navigation Complete
+2021-01-25 11:30:38.286317	Activity Searched
+2021-01-25 11:30:38.286317 	BOM Metadata Maintenance Test Successfull
+2021-01-25 11:32:13.907106	login Started
+2021-01-25 11:32:20.569249	login completed
+2021-01-25 11:32:23.873688	NTSA Navigation Complete
+2021-01-25 11:32:24.558302	Activity Searched
+2021-01-25 11:32:24.558302 	BOM Metadata Maintenance Test Successfull
+2021-01-25 11:33:20.794612	login Started
+2021-01-25 11:33:26.723955	login completed
+2021-01-25 11:33:30.055717	NTSA Navigation Complete
+2021-01-25 11:33:30.833272	Activity Searched
+2021-01-25 11:33:30.833272 	BOM Metadata Maintenance Test Successfull
+2021-01-25 11:34:04.847964	login Started
+2021-01-25 11:34:12.156941	login completed
+2021-01-25 11:34:15.228177	NTSA Navigation Complete
+2021-01-25 11:34:15.864085	Activity Searched
+2021-01-25 11:34:15.864085 	BOM Metadata Maintenance Test Successfull
+2021-01-25 11:35:33.774442	login Started
+2021-01-25 11:35:39.601186	login completed
+2021-01-25 11:35:42.865309	NTSA Navigation Complete
+2021-01-25 11:35:43.607883	Activity Searched
+2021-01-25 11:35:43.607883 	BOM Metadata Maintenance Test Successfull
+2021-01-25 11:54:11.873816	login Started
+2021-01-25 11:54:20.261664	login completed
+2021-01-25 11:54:25.162927	NTSA Navigation Complete
+2021-01-25 11:54:26.163685	Activity Searched
+2021-01-25 11:54:26.163685 	BOM Metadata Maintenance Test Successfull
+2021-02-01 11:36:42.162416	login Started
+2021-02-01 11:36:48.256028	login completed
+2021-02-01 11:36:52.366238	NTSA Navigation Complete
+2021-02-01 11:36:53.162126	Activity Searched
+2021-02-01 11:36:53.162126 	BOM Metadata Maintenance Test Successfull
+2021-02-12 10:49:59.501108	login Started
+2021-02-12 10:50:02.992174	login completed
+2021-02-12 10:50:05.999795	NTSA Navigation Complete
+2021-02-12 10:50:06.748442	Activity Searched
+2021-02-12 10:50:06.748442 	BOM Metadata Maintenance Test Successfull
+2021-02-12 10:56:30.663014	login Started
+2021-02-12 10:56:34.733616	login completed
+2021-02-12 10:56:38.363731	NTSA Navigation Complete
+2021-02-12 10:56:39.069331	Activity Searched
+2021-02-12 10:56:39.069331 	BOM Metadata Maintenance Test Successfull
+2021-02-12 11:01:38.081133	login Started
+2021-02-12 11:01:45.692820	login completed
+2021-02-12 11:01:49.957429	NTSA Navigation Complete
+2021-02-12 11:01:50.699031	Activity Searched
+2021-02-12 11:01:50.699031 	BOM Metadata Maintenance Test Successfull
+2021-02-19 16:21:35.673811	login Started
+2021-02-19 16:21:41.368943	login completed
+2021-02-19 16:21:46.023690	NTSA Navigation Complete
+2021-02-19 16:21:46.817801	Activity Searched
+2021-02-19 16:21:46.817801 	BOM Metadata Maintenance Test Successfull
+2021-02-26 16:38:18.158168	login Started
+2021-02-26 16:38:25.142014	login completed
+2021-02-26 16:38:28.754910	NTSA Navigation Complete
+2021-02-26 16:38:29.378878	Activity Searched
+2021-02-26 16:38:29.378878 	BOM Metadata Maintenance Test Successfull

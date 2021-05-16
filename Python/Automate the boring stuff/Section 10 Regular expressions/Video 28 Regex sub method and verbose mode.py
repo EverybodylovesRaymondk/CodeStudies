@@ -25,3 +25,5 @@ COMPLEX_PHONENUM = re.compile(r'''
            - # First dash
            \d\d\d\d #Last 4 digits''', re.I | re.DOTALL | re.VERBOSE
            )
+
+print(COMPLEX_PHONENUM)

@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys as keys
 import pandas as pd
 from datetime import datetime as dt
 import time
+import pyautogui
 
 #Importing elements and paths
 elements = pd.DataFrame(pd.read_excel('ELEMENTS.XLSX'))
@@ -16,7 +17,7 @@ password = 'dqo39imf'
 url = 'http://ke-ntsa-mas.spsi.co.za/BOMUI/#!/'
 
 #Creating the Chrome driver
-driver = webdriver.Chrome(executable_path="C:\\Users\\raymondk\\Downloads\\chromedriver.exe")
+driver = webdriver.Chrome(executable_path= r'D:\Chrome Driver\88.0.4324.96\chromedriver.exe')
 
 #Login Test
 f.write(str(dt.now()) +'\tlogin Started'+ '\n')
@@ -56,5 +57,5 @@ f.write(str(dt.now()) +'\tActivity Searched'+ '\n')
 f.write(str(dt.now()) +' \t'+ driver.title + ' Test Successfull'+ '\n')
 f.close()
 time.sleep(3)
-driver.save_screenshot('Login_image1.png')
+pyautogui.screenshot('maintainSign Activity.png')
 driver.close()

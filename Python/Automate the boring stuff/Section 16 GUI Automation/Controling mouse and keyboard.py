@@ -13,7 +13,7 @@ pyautogui.moveTo(424,58)
 pyautogui.click()
 
 #closing the preferences.
-pyautogui.moveTo(1455,712,1.5)
+pyautogui.moveTo(1455,712,3)
 pyautogui.click()
 
 
